@@ -24,6 +24,13 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+# Define variables here
+vars:
+  v_deptno: 10
+  v_job: 'MANAGER'
+
+on-run-start: "insert into DBT_DB.DBT_SCH.DBT_AUDITS(audit_type) values('Run_start');"
+on-run-end:  "insert into DBT_DB.DBT_SCH.DBT_AUDITS(audit_type) values('Run_End');"
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
