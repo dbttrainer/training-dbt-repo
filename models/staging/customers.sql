@@ -4,4 +4,4 @@ config(
        ,post_hook= "{{update_metadatalog('customers')}}"
       )
 }}
-Select * from  DBT_DB.LANDING.CUSTOMERS
+Select * from  DBT_DB.LANDING.CUSTOMERS1
